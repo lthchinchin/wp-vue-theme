@@ -1,0 +1,475 @@
+$zillow-blue: #1b48e7;
+$havy-blue: #143180;
+$zillow-light-blue: #dceaff;
+$sale-co: #f43249;
+$rent-co: #ac10c6;
+$sold-co: #ffd900;
+$pj-co: #00b7ff;
+
+.co-sale {
+  color: $sale-co;
+}
+
+.co-black {
+  color: #000 !important;
+}
+
+.co-blue {
+  color: $zillow-blue;
+}
+
+.co-rent {
+  color: $rent-co;
+}
+
+.co-sold {
+  color: $sold-co;
+}
+
+.co-pj {
+  color: $pj-co;
+}
+
+.bg-zill-blue {
+  background: $zillow-blue !important;
+}
+
+.ddl-selected {
+  background: $zillow-light-blue !important;
+  font-weight: bold;
+}
+
+.bg-white {
+  background: white !important;
+}
+
+.bg-mb-zill-blue {
+  @media (max-width: 1199.98px) {
+    background: $zillow-blue !important;
+  }
+}
+
+.bg-havy-blue {
+  background: $havy-blue !important;
+}
+
+h3 i {
+  color: #717171 !important;
+  font-size: 16px !important;
+}
+
+.kws {
+  // z-index: -1;
+  // opacity: 0;
+}
+
+.map-load-mask {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edebe8;
+
+
+}
+
+/* component style */
+.vue-slider-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* rail style */
+.vue-slider-rail {
+  background-color: #ccc;
+  border-radius: 15px;
+}
+
+/* process style */
+.vue-slider-process {
+  background-color: $zillow-blue;
+  border-radius: 15px;
+}
+
+/* mark style */
+.vue-slider-mark {
+  z-index: 4;
+}
+
+.vue-slider-mark:first-child .vue-slider-mark-step,
+.vue-slider-mark:last-child .vue-slider-mark-step {
+  display: none;
+}
+
+.vue-slider-mark-step {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+.vue-slider-mark-label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* dot style */
+.vue-slider-dot-handle {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
+}
+
+.vue-slider-dot-handle-focus {
+  box-shadow: 0px 0px 1px 2px rgba(52, 152, 219, 0.36);
+}
+
+.vue-slider-dot-handle-disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.vue-slider-dot-tooltip-inner {
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 2px 5px;
+  min-width: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  border-color: $zillow-blue;
+  background-color: $zillow-blue;
+  box-sizing: content-box;
+}
+
+.vue-slider-dot-tooltip-inner::after {
+  content: "";
+  position: absolute;
+}
+
+.vue-slider-dot-tooltip-inner-top::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: inherit;
+}
+
+.vue-slider-dot-tooltip-inner-bottom::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: inherit;
+}
+
+.vue-slider-dot-tooltip-inner-left::after {
+  left: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-left-color: inherit;
+}
+
+.vue-slider-dot-tooltip-inner-right::after {
+  right: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-right-color: inherit;
+}
+
+.vue-slider-dot-tooltip-wrapper {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.vue-slider-dot-tooltip-wrapper-show {
+  opacity: 1;
+}
+
+.ddl {
+  .list-group-item {
+    border: none !important;
+  }
+
+  &__button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    box-shadow: 1px 4px 4px 1px #8888887a;
+    border-radius: 0.25rem;
+    z-index: 9;
+    max-height: 250px;
+    overflow-y: auto;
+    width: 120%;
+    top: 120%;
+
+    @media (max-width: 1199.98px) {
+      width: 100%;
+      top: 85%;
+    }
+  }
+}
+
+.ddl.ddl-default {
+  .list-group-item {
+    &:hover {
+      cursor: pointer;
+      background-color: $zillow-light-blue;
+    }
+  }
+}
+
+.ddl.ddl-range {
+  .list-group-item {
+    &:not(:nth-child(1)):not(:nth-child(2)):hover {
+      cursor: pointer !important;
+      background-color: $zillow-light-blue !important;
+    }
+  }
+}
+
+.circle-estate-type {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.circle-estate-type--sale {
+  background-color: $sale-co;
+}
+
+.circle-estate-type--rent {
+  background-color: $rent-co;
+}
+
+.circle-estate-type--sold {
+  background-color: $sold-co;
+}
+
+//
+.item-project {
+  .box-item {
+    &__bottom {
+      span {
+        font-size: 8px;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    &__cover {
+      &--status {
+        background-color: rgba(255, 255, 255, 0.747);
+        color: $zillow-blue;
+      }
+    }
+  }
+}
+
+.vr {
+  display: inline-block;
+  width: 1px;
+  min-height: 1em;
+  opacity: 0.25;
+  background-color: currentColor;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+#map-wrapper {
+  position: relative;
+
+  .map-actions {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 10px;
+    right: 10px;
+  }
+
+  .map-btn {
+    background-image: none;
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    display: table-cell;
+    border: 0px;
+    margin: 0px;
+    padding: 0px 17px;
+    text-transform: none;
+    -webkit-appearance: none;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    direction: ltr;
+    overflow: hidden;
+    text-align: center;
+    height: 40px;
+    vertical-align: middle;
+    color: rgb(86, 86, 86);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    min-width: 65px;
+
+    &:hover {
+      background-color: rgb(235, 235, 235);
+      color: #000;
+    }
+
+    @media (max-width: 991.98px) {
+      padding: 0px 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+// .div.gm-style-iw-t{
+//   display: none !important;
+// }
+
+// reset infowindow 
+.gm-style-iw-d {
+  overflow: unset !important;
+  padding: 6px 3px;
+  border-radius: 10px;
+
+  .marker-content {
+    img {
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 0 !important;
+  // box-shadow: none !important;
+  border-radius: 5px;
+  max-width: 270px !important;
+  // &::after{
+  //   content: none !important;
+  // }
+}
+
+.marker-content {
+  font-size: 18px;
+  color: black;
+
+  &__compact {
+    font-weight: bold;
+  }
+
+  &__extend {
+    padding: 4px;
+
+    h5 {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #717171;
+    }
+  }
+}
+
+button.gm-ui-hover-effect {
+  display: none !important;
+}
+
+
+
+.dd-lab-wrap {
+  * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  color: black;
+
+  .is-open {
+    background: rgb(64, 64, 255) !important;
+  }
+
+  .screen {
+    background: rgb(206, 206, 206);
+    border: 1px solid rgb(202, 202, 202);
+    padding: 8px;
+  }
+
+  .option {
+    padding-left: 0;
+    list-style-type: none;
+    border: 1px solid gray;
+
+    li {
+      background: rgb(206, 206, 206);
+
+      &:hover {
+        background: rgb(108, 108, 255);
+        cursor: pointer;
+
+        .vue-slider {
+          background: rgb(206, 206, 206);
+        }
+      }
+    }
+
+  }
+}
+
+.btn-disable {
+  cursor: default !important;
+  opacity: .7;
+
+  &:hover {
+    background: white !important;
+  }
+}
+
+.h1.hieu {
+  background: red;
+}
+
+/*# sourceMappingURL=default.css.map */

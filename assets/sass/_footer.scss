@@ -1,0 +1,56 @@
+.footer {
+    &-main {
+        padding: 30px 0;
+        background: #f4f7f7;
+    }
+    &-item {
+        img {
+            height: 120px;
+            object-fit: contain;
+            object-position: left;
+        }
+        h3 {
+            color: $main-color;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: $sub-color;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        ul > li {
+            line-height: 28px;
+            > a {
+                color: #000;
+                &:hover {
+                    color: $sub-color;
+                }
+            }
+            &:before {
+                content: "\f054";
+                font-family: "Font Awesome 5 Pro";
+                font-size: 12px;
+                margin-right: 5px;
+            }
+        }
+    }
+    &-copyright {
+        background: $main-color;
+        color: #fff;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        &-main {
+            padding: 30px 0 10px;
+        }
+        &-item {
+            margin-bottom: 20px;
+        }
+    }
+}

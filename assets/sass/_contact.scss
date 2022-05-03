@@ -1,0 +1,109 @@
+.contact-wrapper {
+	padding: 60px 0 0;
+	background-color: #f2f2f2;
+}
+.contact-info {
+	max-width: 760px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+.contact-info ul > li:not(:last-of-type) {
+	margin-bottom: 4px;
+}
+.contact-info .map-box {
+	margin-block: 30px;
+}
+.contact-info .map-box iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 0.5;
+}
+.contact-info .svg-icon {
+	color: $main-color;
+	width: 18px;
+}
+.contact-info__title {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.contact-info__head p {
+	text-transform: uppercase;
+	font-size: 20px;
+	color: $main-color;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.contact-form__head {
+	position: relative;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.contact-form__head:after {
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 4px;
+	background: #cecece;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: 0;
+}
+.contact-form__title {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.contact-form__subtitle {
+	text-transform: initial;
+	font-size: 18px;
+}
+.contact-form__main {
+	max-width: 760px;
+	margin: 0 auto;
+}
+.contact-form__main .wpcf7-form > p > label {
+	width: 100%;
+}
+.contact-form__main .wpcf7-form > p:last-of-type {
+	margin-bottom: 0;
+}
+.contact-form__main .wpcf7-form-control {
+	width: 100%;
+	outline: none;
+	background-color: #fff;
+	border: 1px solid #f3f3f3;
+	padding: 8px 16px;
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+.contact-form__main .wpcf7-submit {
+	position: relative;
+	display: inline-block;
+	width: 165px;
+	padding: 8px;
+	text-decoration: none;
+	background: $main-color;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	width: 100%;
+	transition: 0.3s;
+}
+.contact-form__main .wpcf7-submit:hover {
+	background: $sub-color;
+}
+.contact-form__main .wpcf7-response-output {
+	margin: 0 !important;
+}
+.contact-map {
+	height: 450px;
+}
+.contact-map iframe {
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 991px) {
+	.contact-information__item {
+		margin-bottom: 30px;
+	}
+}

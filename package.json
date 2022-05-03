@@ -1,0 +1,48 @@
+{
+  "name": "html-thep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass assets/sass/style.scss assets/css/style.css -w",
+    "build": "node-sass assets/sass/style.scss assets/css/style.css --output-style compressed",
+    "start": "gulp",
+    "beauty": "gulp build --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header-license": "^1.0.10",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prettier": "^3.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-wp-pot": "^2.4.3",
+    "gulp-zip": "^5.0.1",
+    "prettier": "2.2.1",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.3.1"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "core-js": "^3.10.1",
+    "css-loader": "^6.5.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
+  }
+}

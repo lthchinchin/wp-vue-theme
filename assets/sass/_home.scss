@@ -1,0 +1,390 @@
+.hp-banner {
+    position: relative;
+    &-content {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        max-width: 850px;
+        width: 90%;
+        z-index: 3;
+    }
+    .banner-title {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        span {
+            color: $sub-color;
+            text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+        }
+    }
+    .desc {
+        margin: 0 auto;
+        font-size: 20px;
+        width: 75%;
+    }
+    .baogia {
+        margin-top: 20px;
+        color: #fff;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 16px;
+        background: transparent;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        min-width: 150px;
+        &:hover {
+            background: $sub-color;
+            opacity: 0.7;
+        }
+    }
+    .owl-carousel {
+        z-index: 2;
+    }
+    .owl-carousel-item {
+        height: 600px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba($color: #000, $alpha: 0.7);
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+    .owl-nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        button {
+            pointer-events: all;
+            span {
+                display: none;
+            }
+        }
+        .owl-prev {
+            &:after {
+                content: "\f053";
+                font-family: "Font Awesome 5 Pro";
+                color: #fff;
+                font-size: 40px;
+                font-weight: 300;
+            }
+        }
+        .owl-next {
+            &:after {
+                content: "\f054";
+                font-family: "Font Awesome 5 Pro";
+                color: #fff;
+                font-size: 40px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.hp-about {
+    padding: 80px 0;
+    background: #f4f7f7;
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        .col-left,
+        .col-right {
+            width: 50%;
+        }
+        .col-left {
+            padding-top: 20px;
+            padding-right: 20px;
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                &:after {
+                    content: "";
+                    width: 80px;
+                    height: 2px;
+                    position: absolute;
+                    background: #000;
+                    left: 0;
+                    bottom: 0;
+                }
+                span {
+                    color: $sub-color;
+                }
+            }
+            .desc {
+                font-size: 16px;
+            }
+        }
+        .col-right {
+            .image {
+                height: 350px;
+            }
+        }
+    }
+}
+.hp-product {
+    padding: 80px 0;
+}
+.hp-contact {
+    padding: 80px 0;
+    background-image: url(../images/contact-bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    .form-wrap {
+        max-width: 650px;
+        margin: 0 auto;
+        .form-control {
+            margin-bottom: 8px;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        textarea {
+            height: 90px;
+        }
+    }
+    .submit {
+        width: 100%;
+        font-size: 16px;
+        color: #fff;
+        background: $sub-color;
+        padding: 10px 24px;
+        border: 1px solid $sub-color;
+        transition: 0.3s;
+        &:hover {
+            border-color: $main-color;
+            background: $main-color;
+        }
+    }
+    h2 {
+        color: #fff;
+    }
+    .wpcf7-response-output {
+        margin: 0 !important;
+    }
+}
+.hp-blog {
+    padding: 80px 0;
+    background: #f4f7f7;
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 24px;
+        color: $main-color;
+        &:after {
+            content: "";
+            width: 80px;
+            height: 2px;
+            position: absolute;
+            background: #000;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .list-blog {
+        padding: 10px;
+        box-shadow: 0px 0px 5px #e5e5e5;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        margin-bottom: 0;
+        > li {
+            display: flex;
+            justify-content: space-between;
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #cdcdcd;
+            }
+            &:last-of-type {
+                margin-bottom: 10px;
+            }
+            .thumb {
+                width: 150px;
+                height: 76px;
+                aspect-ratio: 1 / 0.5;
+                overflow: hidden;
+                img {
+                    transition: 0.3s;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .content {
+                width: calc(100% - 165px);
+                position: relative;
+                > a {
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 600;
+                    &:hover {
+                        color: $sub-color;
+                    }
+                }
+                .date {
+                    color: #888;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+        .bottom {
+            > a {
+                color: $main-color;
+                font-weight: 600;
+                &:hover {
+                    color: $sub-color;
+                }
+            }
+        }
+    }
+    .list-promotion {
+        padding: 16px 16px 10px;
+        box-shadow: 0px 0px 5px #e5e5e5;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        > li {
+            width: calc(50% - 8px);
+            .thumb {
+                aspect-ratio: 1 / 0.5;
+                overflow: hidden;
+                img {
+                    transition: 0.3s;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .content {
+                margin-top: 6px;
+                .title {
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                    > a {
+                        color: #000;
+                        font-weight: 600;
+                        &:hover {
+                            color: $sub-color;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            width: 100%;
+            margin-top: 10px;
+            > a {
+                color: $main-color;
+                font-weight: 600;
+                &:hover {
+                    color: $sub-color;
+                }
+            }
+        }
+    }
+}
+.hp-brand {
+    padding: 80px 0;
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .owl-carousel-item {
+        border: 1px solid #cdcdcd;
+        height: 150px;
+        padding: 10px;
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .hp-banner {
+        .owl-carousel-item {
+            height: 500px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .hp-about {
+        &-wrap {
+            .col-left,
+            .col-right {
+                width: 100%;
+            }
+            .col-left {
+                padding: 0;
+                order: 2;
+                margin-top: 20px;
+            }
+            .col-right {
+                order: 1;
+                .image {
+                    height: auto;
+                }
+            }
+        }
+    }
+    .hp-blog {
+        .list-blog {
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .hp-banner {
+        .desc {
+            font-size: 16px;
+        }
+        .owl-carousel-item {
+            height: 400px;
+        }
+        .owl-nav {
+            width: 96%;
+        }
+    }
+    .hp-blog {
+        .list-promotion {
+            > li {
+                width: 100%;
+                &:not(:last-of-type) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    .hp-brand {
+        .section-title {
+            margin-bottom: 20px;
+        }
+        .owl-carousel-item {
+            height: 100px;
+        }
+    }
+}
